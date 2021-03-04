@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  /* ### Primary */
+
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ### Neutral */
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* Note for text colors:
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+body {
+  background-color: var(--Light-grayish-blue);
+}
+
+.cards {
+  margin: 70px auto;
+  width: 88%;
+  display: grid;
+  row-gap: 20px;
+}
+
+.card {
+  display: grid;
+  row-gap: 15px;
+  border-radius: 10px;
+  padding: 25px 30px 30px;
+  box-shadow: 0px 10px 30px hsla(217, 19%, 35%, 0.3);
+}
+
+.card header img {
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid var();
+  float: left;
+  margin-right: 15px;
+}
+
+.card header p {
+  line-height: 1.2em;
+}
+
+.card header p:nth-of-type(2) {
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
+.card p {
+  opacity: 0.7;
+  line-height: 1.5em;
+}
+
+.card-1 {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 30px;
+  background-color: var(--Moderate-violet);
+}
+
+.card-2 {
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+.card-3,
+.card-5 {
+  background-color: white;
+}
+
+.card-4 {
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+.card-1 header img,
+.card-4 header img {
+  border: 2px solid rgb(165, 119, 238);
+}
+
+.card-1,
+.card-2,
+.card-4 {
+  color: white;
+}
+
+.card-3,
+.card-5 {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.card-3 header p:nth-of-type(1),
+.card-5 header p:nth-of-type(1) {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 375px) {
+  .cards {
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cards {
+    max-width: unset;
+    margin: 160px auto;
+    width: 77%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+  }
+
+  .card-1 {
+    background-position: top right 90px;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .card-2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .card-3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .card-4 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+
+  .card-5 {
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+}
+
+/* attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a:link {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
